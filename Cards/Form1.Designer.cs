@@ -29,28 +29,18 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cardList1 = new System.Windows.Forms.ListBox();
+            this.Title = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.newCard = new System.Windows.Forms.Button();
-            this.viewCard = new System.Windows.Forms.Button();
-            this.hideCard = new System.Windows.Forms.Button();
-            this.newDeck = new System.Windows.Forms.Button();
-            this.test = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cardList2 = new System.Windows.Forms.ListBox();
+            this.deckExplorer = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -63,6 +53,13 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -71,170 +68,97 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // newToolStripMenuItem
-            // 
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
-            this.newToolStripMenuItem.Text = "New";
-            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
-            // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.07692F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.92308F));
-            this.tableLayoutPanel1.Controls.Add(this.cardList1, 0, 0);
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.Title, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.62577F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.37423F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(952, 536);
             this.tableLayoutPanel1.TabIndex = 1;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // cardList1
+            // Title
             // 
-            this.cardList1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardList1.FormattingEnabled = true;
-            this.cardList1.Location = new System.Drawing.Point(3, 3);
-            this.cardList1.Name = "cardList1";
-            this.cardList1.Size = new System.Drawing.Size(213, 451);
-            this.cardList1.TabIndex = 0;
-            this.cardList1.SelectedIndexChanged += new System.EventHandler(this.cardList1_SelectedIndexChanged);
+            this.Title.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Calibri", 25.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.Location = new System.Drawing.Point(423, 73);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(106, 41);
+            this.Title.TabIndex = 0;
+            this.Title.Text = "Cards!";
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 5;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.48617F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.48618F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.48618F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.48618F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.05529F));
-            this.tableLayoutPanel2.Controls.Add(this.newCard, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.viewCard, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.hideCard, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.newDeck, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.test, 4, 0);
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.deckExplorer, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.button2, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.button3, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.button4, 3, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(222, 460);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(243, 191);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(727, 52);
-            this.tableLayoutPanel2.TabIndex = 2;
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(466, 152);
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // newCard
+            // deckExplorer
             // 
-            this.newCard.Location = new System.Drawing.Point(241, 3);
-            this.newCard.Name = "newCard";
-            this.newCard.Size = new System.Drawing.Size(69, 23);
-            this.newCard.TabIndex = 2;
-            this.newCard.Text = "New Card";
-            this.newCard.UseVisualStyleBackColor = true;
-            this.newCard.Click += new System.EventHandler(this.newCard_Click);
+            this.deckExplorer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.deckExplorer.Location = new System.Drawing.Point(13, 63);
+            this.deckExplorer.Name = "deckExplorer";
+            this.deckExplorer.Size = new System.Drawing.Size(90, 23);
+            this.deckExplorer.TabIndex = 0;
+            this.deckExplorer.Text = "Deck Explorer";
+            this.deckExplorer.UseVisualStyleBackColor = true;
+            this.deckExplorer.Click += new System.EventHandler(this.deckExplorer_Click);
             // 
-            // viewCard
+            // button2
             // 
-            this.viewCard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.viewCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.viewCard.Location = new System.Drawing.Point(3, 3);
-            this.viewCard.Name = "viewCard";
-            this.viewCard.Size = new System.Drawing.Size(113, 22);
-            this.viewCard.TabIndex = 0;
-            this.viewCard.Text = "View Card";
-            this.viewCard.UseVisualStyleBackColor = true;
-            this.viewCard.Click += new System.EventHandler(this.viewCard_Click);
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Location = new System.Drawing.Point(129, 63);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Placeholder";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // hideCard
+            // button3
             // 
-            this.hideCard.Location = new System.Drawing.Point(122, 3);
-            this.hideCard.Name = "hideCard";
-            this.hideCard.Size = new System.Drawing.Size(69, 23);
-            this.hideCard.TabIndex = 1;
-            this.hideCard.Text = "Hide Card";
-            this.hideCard.UseVisualStyleBackColor = true;
-            this.hideCard.Click += new System.EventHandler(this.hideCard_Click);
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.Location = new System.Drawing.Point(245, 63);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(90, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Placeholder";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // newDeck
+            // button4
             // 
-            this.newDeck.Location = new System.Drawing.Point(360, 3);
-            this.newDeck.Name = "newDeck";
-            this.newDeck.Size = new System.Drawing.Size(69, 23);
-            this.newDeck.TabIndex = 3;
-            this.newDeck.Text = "New Deck";
-            this.newDeck.UseVisualStyleBackColor = true;
-            this.newDeck.Click += new System.EventHandler(this.newDeck_Click);
-            // 
-            // test
-            // 
-            this.test.Location = new System.Drawing.Point(479, 3);
-            this.test.Name = "test";
-            this.test.Size = new System.Drawing.Size(75, 23);
-            this.test.TabIndex = 4;
-            this.test.Text = "button1";
-            this.test.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(3, 460);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(222, 518);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 15);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 5;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.Controls.Add(this.groupBox1, 3, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(222, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(727, 451);
-            this.tableLayoutPanel3.TabIndex = 7;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cardList2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(508, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(145, 451);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // cardList2
-            // 
-            this.cardList2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardList2.FormattingEnabled = true;
-            this.cardList2.Location = new System.Drawing.Point(0, 13);
-            this.cardList2.Name = "cardList2";
-            this.cardList2.Size = new System.Drawing.Size(145, 438);
-            this.cardList2.TabIndex = 12;
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button4.Location = new System.Drawing.Point(362, 63);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(90, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Placeholder";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -249,11 +173,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,18 +186,12 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ListBox cardList1;
+        private System.Windows.Forms.Label Title;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button viewCard;
-        private System.Windows.Forms.Button hideCard;
-        private System.Windows.Forms.Button newCard;
-        private System.Windows.Forms.Button newDeck;
-        private System.Windows.Forms.Button test;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox cardList2;
+        private System.Windows.Forms.Button deckExplorer;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

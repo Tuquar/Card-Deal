@@ -11,7 +11,8 @@ namespace Cards
     {
         public int suit;
         public int value;
-        public int weight;
+        private int weight;
+        public int order;
 
         public Card(int suit, int value)
         {
@@ -75,6 +76,19 @@ namespace Cards
             }
             return null;
         }
+
+        public Card CompareCard(Card a, Card b)
+        {
+            if (a.weight > b.weight)
+            {
+                return a;
+            } else if (a.weight == b.weight)
+            {
+                return null;
+            }
+            return b;
+        }
+
     }
 
 }
