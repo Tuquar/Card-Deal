@@ -12,7 +12,7 @@ namespace Cards
         public int suit;
         public int value;
         private int weight;
-        public int order;
+        //public int order;
 
         public Card(int suit, int value)
         {

@@ -48,7 +48,7 @@ namespace Cards
 
         public List<String> ToFullString()
         {
-            return this.DeckofCards.Select(card => card.valueToString() + " of " + card.suitToString() + card.order.ToString()).ToList();
+            return this.DeckofCards.Select(card => card.valueToString() + " of " + card.suitToString()).ToList();
         }
     }
 }
