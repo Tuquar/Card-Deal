@@ -29,8 +29,8 @@ namespace Cards
 
         public void ShuffleDeck()
         {
+            Console.WriteLine("Shuffling cards...");
             Random rng = new Random();
-
             int deckLength = this.DeckofCards.Count;
             while (deckLength > 1)
             {
@@ -44,6 +44,7 @@ namespace Cards
 
         public void OrderDeck()
         {
+            Console.WriteLine("Ordering cards...");
             this.DeckofCards = this.DeckofCards.OrderBy(card => card.suit).ThenBy(card => card.value).ToList();
         }
 

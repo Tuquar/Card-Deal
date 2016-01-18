@@ -21,7 +21,7 @@ namespace Cards
             mainDeckDisplay.BeginUpdate();
             foreach (var card in eDeck.DeckofCards)
             {
-                mainDeckDisplay.Items.Add(card.valueToString() + " of " + card.suitToString());
+                mainDeckDisplay.Items.Add(card.ValueToString() + " of " + card.SuitToString());
             }
             mainDeckDisplay.EndUpdate();
         }
@@ -32,30 +32,28 @@ namespace Cards
             if (selectedCardIndex >= 0 && selectedCardIndex <= eDeck.DeckofCards.Count)
             {
                 Card card = eDeck.DeckofCards[selectedCardIndex];
-                updatemainDeckDisplayImage(card);
+                UpdateMainDeckDisplayImage(card);
             }
             
         }
 
-        private void updatemainDeckDisplayImage(Card cardToDisplay)
+        private void UpdateMainDeckDisplayImage(Card cardToDisplay)
         {
             if (CardPictureBox.Image != null)
             {
                 CardPictureBox.Image.Dispose();   
             }
-            Image card = cardToDisplay.getCardImage(cardToDisplay);
+            Image card = cardToDisplay.GetCardImage(cardToDisplay);
             CardPictureBox.Image = card;
         }
 
         private void shuffleDeck_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Shuffle");
             eDeck.ShuffleDeck();
             UpdateDisplay(eDeck);
         }
         private void orderDeck_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Order");
             eDeck.OrderDeck();
             UpdateDisplay(eDeck);
         }

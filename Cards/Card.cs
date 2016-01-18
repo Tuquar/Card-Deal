@@ -36,7 +36,7 @@ namespace Cards
             return weight;
         }
 
-        public string suitToString()
+        public string SuitToString()
         {
             switch (this.suit)
             {
@@ -52,7 +52,7 @@ namespace Cards
             return null;
         }
 
-        public string valueToString()
+        public string ValueToString()
         {
             if (this.value < 11 && this.value != 1)
             {
@@ -76,7 +76,7 @@ namespace Cards
 
         public string ToFullString()
         {
-            string cardString = this.valueToString() + " of " + this.suitToString();
+            string cardString = this.ValueToString() + " of " + this.SuitToString();
             return cardString;
         }
 
@@ -92,7 +92,7 @@ namespace Cards
             return b;
         }
 
-        public Image getCardImage(Card card)
+        public Image GetCardImage(Card card)
         {
 
             int x = 1, y = 1;
@@ -111,6 +111,7 @@ namespace Cards
         {
             public Image DrawImg (int gridX, int gridY)
             {
+                String fileLocation = "C:\\Git\\Projects\\Cards\\Cards\\assets\\std.gif";
                 int x = 72;
                 int y = 100;
                 
@@ -118,30 +119,15 @@ namespace Cards
                 gridY = (y*gridY) - y;
 
                 Rectangle cardSize = new Rectangle( gridX, gridY, x, y);
-
-                Image CardImg = cropImage(GetImgFromLocation(), cardSize);
+                
+                Image CardImg = cropImage(GetImgFromLocation(fileLocation), cardSize);
 
                 return CardImg;
-
-                //Rectangle cropRectangle = new Rectangle();
-                //Bitmap src = Image.FromFile(fileName) as Bitmap;
-                //Bitmap target = new Bitmap(cropRect.Width, cropRect.Height);
-
-                //using (Graphics g = Graphics.FromImage(target))
-                //{
-                //    g.DrawImage(src, new Rectangle(0, 0, target.Width, target.Height),
-                //                     cropRect,
-                //                     GraphicsUnit.Pixel);
-                //}
             }
 
-            private Image GetImgFromLocation()
+            private Image GetImgFromLocation(String fileLocation)
             {
-                String fileLocation = "C:\\Git\\Projects\\Cards\\Cards\\assets\\std.gif";
-
-                //Bitmap bmpImage = new Bitmap();
                 Bitmap bmpImage = (Bitmap) Image.FromFile(fileLocation);
-                //Image bmpImage = new Image();
                 return bmpImage;
             }
 
@@ -154,7 +140,6 @@ namespace Cards
             }
 
         }
-
 
     }
 
