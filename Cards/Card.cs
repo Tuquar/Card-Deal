@@ -92,6 +92,12 @@ namespace Cards
             return b;
         }
 
+        public int GetPlayed()
+        {
+
+            return 0;
+        }
+
         public Image GetCardImage(Card card)
         {
 

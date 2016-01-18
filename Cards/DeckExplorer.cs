@@ -26,38 +26,57 @@ namespace Cards
             mainDeckDisplay.EndUpdate();
         }
 
+        private void shuffleDeck_Click(object sender, EventArgs e)
+        {
+            eDeck.ShuffleDeck();
+            UpdateCardListDisplay(eDeck);
+        }
+        private void orderDeck_Click(object sender, EventArgs e)
+        {
+            eDeck.OrderDeck();
+            UpdateCardListDisplay(eDeck);
+        }
         private void mainDeckDisplay_SelectedIndexChanged(object sender, EventArgs e)
         {
             int selectedCardIndex = mainDeckDisplay.SelectedIndex;
             if (selectedCardIndex >= 0 && selectedCardIndex <= eDeck.DeckofCards.Count)
             {
-                Card card = eDeck.DeckofCards[selectedCardIndex];
-                UpdateMainDeckDisplayImage(card);
+                Card NewSelectedCard = eDeck.DeckofCards[selectedCardIndex];
+                UpdateMainDeckDisplayImage(NewSelectedCard);
+                UpdateCardDataDisplay(NewSelectedCard);
             }
-            
         }
 
-        private void UpdateMainDeckDisplayImage(Card cardToDisplay)
+
+
+        // Custom Methods
+        private void UpdateMainDeckDisplayImage(Card newSelectedCard)
         {
+            
             if (CardPictureBox.Image != null)
             {
-                CardPictureBox.Image.Dispose();   
+                CardPictureBox.Image.Dispose();
             }
-            Image card = cardToDisplay.GetCardImage(cardToDisplay);
-            CardPictureBox.Image = card;
+            Image card = newSelectedCard.GetCardImage(newSelectedCard);
+            CardPictureBox.Image = card;   
         }
 
-        private void shuffleDeck_Click(object sender, EventArgs e)
+        private void UpdateCardDataDisplay(Card newSelectedCard)
         {
-            eDeck.ShuffleDeck();
-            UpdateDisplay(eDeck);
+            cardHeader.Text = newSelectedCard.ToFullString();
+
+            dataCardName.Text = newSelectedCard.ToFullString();
+            dataCardSuit.Text = newSelectedCard.SuitToString();
+            dataCardValue.Text = newSelectedCard.ValueToString();
+            dataCardPlayed.Text = newSelectedCard.GetPlayed().ToString();
+
+            dataCardName.Visible = true;
+            dataCardSuit.Visible = true;
+            dataCardValue.Visible = true;
+            dataCardPlayed.Visible = true;
         }
-        private void orderDeck_Click(object sender, EventArgs e)
-        {
-            eDeck.OrderDeck();
-            UpdateDisplay(eDeck);
-        }
-        private void UpdateDisplay(Deck deckSrc)
+
+        private void UpdateCardListDisplay(Deck deckSrc)
         {
             List<String> deckStr = deckSrc.ToFullStringList();
             mainDeckDisplay.DataSource = null;
@@ -65,11 +84,22 @@ namespace Cards
             mainDeckDisplay.Update();
         }
 
+
+
+        // Unused onclicks
         private void CardPictureBox_Click(object sender, EventArgs e)
         {
             
+        }
 
-            
+        private void suitLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cardHeader_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
