@@ -7,3 +7,4 @@ c:\git\Projects\Cards\Cards\obj\Debug\Cards.csproj.GenerateResource.Cache
 c:\git\Projects\Cards\Cards\obj\Debug\Cards.exe
 c:\git\Projects\Cards\Cards\obj\Debug\Cards.pdb
 C:\Git\Projects\Cards\Cards\obj\Debug\Cards.DeckExplorer.resources
+c:\Git\Projects\Cards\Cards\obj\Debug\Cards.csprojResolveAssemblyReference.cache

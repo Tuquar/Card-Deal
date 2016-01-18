@@ -1,9 +1,6 @@
 ﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
+using System.Drawing.Configuration;
 
 namespace Cards
 {
@@ -12,7 +9,7 @@ namespace Cards
         public int suit;
         public int value;
         private int weight;
-        //public int order;
+        public int order;
 
         public Card(int suit, int value)
         {
@@ -44,13 +41,13 @@ namespace Cards
             switch (this.suit)
             {
                 case 1:
-                    return "Diamonds";
-                case 2:
                     return "Hearts";
+                case 2:
+                    return "Diamonds";
                 case 3:
-                    return "Spades";
-                case 4:
                     return "Clubs";
+                case 4:
+                    return "Spades";
             }
             return null;
         }
@@ -77,6 +74,12 @@ namespace Cards
             return null;
         }
 
+        public string ToFullString()
+        {
+            string cardString = this.valueToString() + " of " + this.suitToString();
+            return cardString;
+        }
+
         public Card CompareCard(Card a, Card b)
         {
             if (a.weight > b.weight)
@@ -88,6 +91,70 @@ namespace Cards
             }
             return b;
         }
+
+        public Image getCardImage(Card card)
+        {
+
+            int x = 1, y = 1;
+
+            y = card.suit;
+            x = card.value;
+
+            CardImgReader cardImgRdr = new CardImgReader();
+            Image CardImage = cardImgRdr.DrawImg(x, y);
+
+            return CardImage;
+
+        }
+
+        private class CardImgReader
+        {
+            public Image DrawImg (int gridX, int gridY)
+            {
+                int x = 72;
+                int y = 100;
+                
+                gridX = (x*gridX) - x;
+                gridY = (y*gridY) - y;
+
+                Rectangle cardSize = new Rectangle( gridX, gridY, x, y);
+
+                Image CardImg = cropImage(GetImgFromLocation(), cardSize);
+
+                return CardImg;
+
+                //Rectangle cropRectangle = new Rectangle();
+                //Bitmap src = Image.FromFile(fileName) as Bitmap;
+                //Bitmap target = new Bitmap(cropRect.Width, cropRect.Height);
+
+                //using (Graphics g = Graphics.FromImage(target))
+                //{
+                //    g.DrawImage(src, new Rectangle(0, 0, target.Width, target.Height),
+                //                     cropRect,
+                //                     GraphicsUnit.Pixel);
+                //}
+            }
+
+            private Image GetImgFromLocation()
+            {
+                String fileLocation = "C:\\Git\\Projects\\Cards\\Cards\\assets\\std.gif";
+
+                //Bitmap bmpImage = new Bitmap();
+                Bitmap bmpImage = (Bitmap) Image.FromFile(fileLocation);
+                //Image bmpImage = new Image();
+                return bmpImage;
+            }
+
+            private static Image cropImage(Image img, Rectangle cropArea)
+            {
+
+                Bitmap bmpImage = new Bitmap(img);
+                return bmpImage.Clone(cropArea, bmpImage.PixelFormat);
+
+            }
+
+        }
+
 
     }
 

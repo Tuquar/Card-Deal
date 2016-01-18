@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
@@ -13,14 +14,14 @@ namespace Cards
 
         public Deck()
         {
-            //int order = 0;
+            int order = 0;
             for (int suit = 1; suit <= 4; suit++)
             {
                 for (int value = 1; value < 14; value++)
                 {
                     this.DeckofCards.Add(new Card(suit , value));
-                    //DeckofCards.Last().order = order;
-                    //order++;
+                    DeckofCards.Last().order = order;
+                    order++;
                 }
             }
 
@@ -46,9 +47,9 @@ namespace Cards
             this.DeckofCards = this.DeckofCards.OrderBy(card => card.suit).ThenBy(card => card.value).ToList();
         }
 
-        public List<String> ToFullString()
+        public List<String> ToFullStringList()
         {
-            return this.DeckofCards.Select(card => card.valueToString() + " of " + card.suitToString()).ToList();
+            return this.DeckofCards.Select(card => card.ToFullString()).ToList();
         }
     }
 }

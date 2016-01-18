@@ -28,29 +28,50 @@ namespace Cards
 
         private void mainDeckDisplay_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int selectedCardIndex = mainDeckDisplay.SelectedIndex;
+            if (selectedCardIndex >= 0 && selectedCardIndex <= eDeck.DeckofCards.Count)
+            {
+                Card card = eDeck.DeckofCards[selectedCardIndex];
+                updatemainDeckDisplayImage(card);
+            }
+            
+        }
 
+        private void updatemainDeckDisplayImage(Card cardToDisplay)
+        {
+            if (CardPictureBox.Image != null)
+            {
+                CardPictureBox.Image.Dispose();   
+            }
+            Image card = cardToDisplay.getCardImage(cardToDisplay);
+            CardPictureBox.Image = card;
         }
 
         private void shuffleDeck_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Shuffle");
             eDeck.ShuffleDeck();
-            Console.WriteLine(eDeck);
             UpdateDisplay(eDeck);
         }
         private void orderDeck_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Order");
             eDeck.OrderDeck();
-            Console.WriteLine(eDeck);
             UpdateDisplay(eDeck);
         }
         private void UpdateDisplay(Deck deckSrc)
         {
-            List<String> deckStr = deckSrc.ToFullString();
+            List<String> deckStr = deckSrc.ToFullStringList();
             mainDeckDisplay.DataSource = null;
             mainDeckDisplay.DataSource = deckStr;
             mainDeckDisplay.Update();
+        }
+
+        private void CardPictureBox_Click(object sender, EventArgs e)
+        {
+            
+
+            
         }
     }
 }
