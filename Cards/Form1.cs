@@ -29,5 +29,11 @@ namespace Cards
             DeckExplorer wDeck = new DeckExplorer();
             wDeck.Show();
         }
+
+        private void newGameButton_Click(object sender, EventArgs e)
+        {
+            GameBoard wBoard = new GameBoard();
+            wBoard.Show();
+        }
     }
 }
