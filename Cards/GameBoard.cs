@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Cards
 {
@@ -15,6 +16,13 @@ namespace Cards
         public GameBoard()
         {
             InitializeComponent();
+        }
+
+        private void blackjackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Blackjack blackjack = new Blackjack();
+            blackjack.Show();
+            this.Close();
         }
     }
 }

@@ -98,6 +98,16 @@ namespace Cards
             return 0;
         }
 
+        public Image GetCardBack()
+        {
+            int x = 5, y = 6;
+
+            CardImgReader cardImgRdr = new CardImgReader();
+            Image cardBackImg = cardImgRdr.DrawImg(x, y);
+
+            return cardBackImg;
+        }
+
         public Image GetCardImage(Card card)
         {
 
@@ -107,9 +117,9 @@ namespace Cards
             x = card.value;
 
             CardImgReader cardImgRdr = new CardImgReader();
-            Image CardImage = cardImgRdr.DrawImg(x, y);
+            Image cardImage = cardImgRdr.DrawImg(x, y);
 
-            return CardImage;
+            return cardImage;
 
         }
 
@@ -118,6 +128,7 @@ namespace Cards
             public Image DrawImg (int gridX, int gridY)
             {
                 String fileLocation = "C:\\Git\\Projects\\Cards\\Cards\\assets\\std.gif";
+                // dimentions of a card in pixels
                 int x = 72;
                 int y = 100;
                 

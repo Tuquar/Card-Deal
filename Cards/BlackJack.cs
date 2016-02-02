@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Cards
 {
-    public partial class BlackJack : Form
+    public partial class Blackjack : Form
     {
-        public BlackJack()
+        private Deck gameDeck;
+        public Blackjack()
         {
             InitializeComponent();
+
+            gameDeck = new Deck();
         }
+
+
     }
 }
