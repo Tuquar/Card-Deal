@@ -38,6 +38,9 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.playerTotalLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.p1DrawCardBtn = new System.Windows.Forms.Button();
+            this.p1StickBtn = new System.Windows.Forms.Button();
             this.dealerBox = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -45,14 +48,12 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.p1DrawCardBtn = new System.Windows.Forms.Button();
-            this.p1StickBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
             this.dealerBox.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -60,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -172,6 +172,43 @@
             this.playerTotalLabel.TabIndex = 1;
             this.playerTotalLabel.Text = "Total";
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.p1DrawCardBtn, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.p1StickBtn, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(182, 4);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(83, 115);
+            this.tableLayoutPanel4.TabIndex = 2;
+            // 
+            // p1DrawCardBtn
+            // 
+            this.p1DrawCardBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.p1DrawCardBtn.Location = new System.Drawing.Point(4, 17);
+            this.p1DrawCardBtn.Name = "p1DrawCardBtn";
+            this.p1DrawCardBtn.Size = new System.Drawing.Size(75, 23);
+            this.p1DrawCardBtn.TabIndex = 0;
+            this.p1DrawCardBtn.Text = "Draw";
+            this.p1DrawCardBtn.UseVisualStyleBackColor = true;
+            this.p1DrawCardBtn.Click += new System.EventHandler(this.p1DrawCardBtn_Click);
+            // 
+            // p1StickBtn
+            // 
+            this.p1StickBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.p1StickBtn.Location = new System.Drawing.Point(4, 74);
+            this.p1StickBtn.Name = "p1StickBtn";
+            this.p1StickBtn.Size = new System.Drawing.Size(75, 23);
+            this.p1StickBtn.TabIndex = 1;
+            this.p1StickBtn.Text = "Stick";
+            this.p1StickBtn.UseVisualStyleBackColor = true;
+            // 
             // dealerBox
             // 
             this.dealerBox.BackColor = System.Drawing.Color.OliveDrab;
@@ -238,42 +275,6 @@
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
             // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Controls.Add(this.p1DrawCardBtn, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.p1StickBtn, 0, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(182, 4);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(83, 115);
-            this.tableLayoutPanel4.TabIndex = 2;
-            // 
-            // p1DrawCardBtn
-            // 
-            this.p1DrawCardBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.p1DrawCardBtn.Location = new System.Drawing.Point(4, 17);
-            this.p1DrawCardBtn.Name = "p1DrawCardBtn";
-            this.p1DrawCardBtn.Size = new System.Drawing.Size(75, 23);
-            this.p1DrawCardBtn.TabIndex = 0;
-            this.p1DrawCardBtn.Text = "Draw";
-            this.p1DrawCardBtn.UseVisualStyleBackColor = true;
-            // 
-            // p1StickBtn
-            // 
-            this.p1StickBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.p1StickBtn.Location = new System.Drawing.Point(4, 74);
-            this.p1StickBtn.Name = "p1StickBtn";
-            this.p1StickBtn.Size = new System.Drawing.Size(75, 23);
-            this.p1StickBtn.TabIndex = 1;
-            this.p1StickBtn.Text = "Stick";
-            this.p1StickBtn.UseVisualStyleBackColor = true;
-            // 
             // Blackjack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,6 +293,7 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.dealerBox.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -299,7 +301,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

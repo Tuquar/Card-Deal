@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace Cards
 {
-    public partial class Blackjack : Form
+    public partial class PlayerCountPop : Form
     {
-        public Blackjack()
+        public PlayerCountPop()
         {
-
             InitializeComponent();
-
-            //GameMaster BlackjackGM = new GameMaster();
-            
-        }
-
-        private void p1DrawCardBtn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
