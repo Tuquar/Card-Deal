@@ -22,7 +22,13 @@ namespace Cards
         {
             Blackjack blackjack = new Blackjack();
             blackjack.Show();
-            this.Close();
+            this.Hide();
+            blackjack.Disposed += new System.EventHandler(GameEnded);
+        }
+
+        private void GameEnded(object sender, EventArgs e)
+        {
+            this.Show();
         }
     }
 }

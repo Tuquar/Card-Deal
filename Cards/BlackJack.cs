@@ -40,8 +40,15 @@ namespace Cards
 
             this.Enabled = true;
             List<Player> playerList = playerPopup.GetPlayerQueue;
-
-            GameMaster BlackjackGM = new GameMaster(playerList);
+            if (playerList.Count > 0)
+            {
+                GameMaster BlackjackGM = new GameMaster(playerList);
+            }
+            else
+            {
+                Console.WriteLine("No players chosen");
+                this.Dispose();
+            }
 
         }
 
