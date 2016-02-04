@@ -72,6 +72,14 @@
     <Compile Include="GameBoard.Designer.cs">
       <DependentUpon>GameBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameMaster.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerCountPop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerCountPop.Designer.cs">
+      <DependentUpon>PlayerCountPop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Blackjack.resx">
@@ -85,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GameBoard.resx">
       <DependentUpon>GameBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerCountPop.resx">
+      <DependentUpon>PlayerCountPop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

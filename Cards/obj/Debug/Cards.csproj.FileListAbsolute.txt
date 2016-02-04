@@ -10,3 +10,4 @@ C:\Git\Projects\Cards\Cards\obj\Debug\Cards.DeckExplorer.resources
 c:\Git\Projects\Cards\Cards\obj\Debug\Cards.csprojResolveAssemblyReference.cache
 c:\Git\Projects\Cards\Cards\obj\Debug\Cards.GameBoard.resources
 c:\Git\Projects\Cards\Cards\obj\Debug\Cards.Blackjack.resources
+c:\Git\Projects\Cards\Cards\obj\Debug\Cards.PlayerCountPop.resources
