@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cards
 {
-    class Player
+    public class Player
     {
         private String name;
         private int score;

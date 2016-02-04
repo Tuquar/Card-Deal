@@ -12,12 +12,12 @@ namespace Cards
         private int maxPlayers;
         private int playerCount;
         private Deck gameDeck;
-        private Player[] playerArray;
+        private List<Player> playerList;
 
-        public GameMaster(Player[] playerArray)
+        public GameMaster(List<Player> listOfPlayers)
         {
-            playerCount = playerArray.Length;
-            this.playerArray = playerArray;
+            playerCount = playerList.Count;
+            this.playerList = listOfPlayers;
         }
     }
 }

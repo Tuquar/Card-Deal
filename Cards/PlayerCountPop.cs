@@ -12,9 +12,21 @@ namespace Cards
 {
     public partial class PlayerCountPop : Form
     {
+        private List<Player> playerQueue = new List<Player>();  
+
         public PlayerCountPop()
         {
             InitializeComponent();
+
+         //   this.Closed += new System.EventHandler();
         }
+
+        public List<Player> GetPlayerQueue {get { return this.playerQueue; }}
+
+        public void UnlockGame()
+        {
+
+        }
+
     }
 }
