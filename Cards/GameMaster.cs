@@ -16,7 +16,7 @@ namespace Cards
 
         public GameMaster(List<Player> listOfPlayers)
         {
-            playerCount = playerList.Count;
+            playerCount = listOfPlayers.Count;
             this.playerList = listOfPlayers;
         }
     }

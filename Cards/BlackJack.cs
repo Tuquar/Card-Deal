@@ -13,6 +13,7 @@ namespace Cards
     public partial class Blackjack : Form
     {
         PlayerCountPop playerPopup = new PlayerCountPop();
+        private GameMaster BlackjackGM;
 
         public Blackjack()
         {
@@ -42,13 +43,14 @@ namespace Cards
             List<Player> playerList = playerPopup.GetPlayerQueue;
             if (playerList.Count > 0)
             {
-                GameMaster BlackjackGM = new GameMaster(playerList);
+                BlackjackGM = new GameMaster(playerList);
             }
             else
             {
                 Console.WriteLine("No players chosen");
                 this.Dispose();
             }
+            playerPopup.Dispose();
 
         }
 

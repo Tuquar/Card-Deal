@@ -17,16 +17,37 @@ namespace Cards
         public PlayerCountPop()
         {
             InitializeComponent();
-
-         //   this.Closed += new System.EventHandler();
+            this.AcceptButton = AddNewPlayerBtn;
+            AddNewPlayerBtn.GotFocus += new EventHandler(AddPlayerFocus);
+            AddNewPlayerBtn.LostFocus += new EventHandler(AddPlayerLostFocus);
         }
 
         public List<Player> GetPlayerQueue {get { return this.playerQueue; }}
 
-        public void UnlockGame()
+        private void AddNewPlayerBtn_Click(object sender, EventArgs e)
         {
-
+            Player newPlayer = new Player(NewPlayerInput.Text);
+            playerQueue.Add(newPlayer);
+            Console.WriteLine(newPlayer.PlayerName);
+            NewPlayerInput.ResetText();
         }
 
+        private void DoneBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void AddPlayerFocus(object sender, EventArgs e)
+        {
+            this.AcceptButton = AddNewPlayerBtn;
+
+            TableLayoutPanel newPlayer = PlayerLayout; //TODO: This will eventually clone a current tablelayout and create more. Look for a more efficient method.
+            
+        }
+
+        private void AddPlayerLostFocus(object sender, EventArgs e)
+        {
+            //this.AcceptButton = this.DoneBtn;
+        }
     }
 }
