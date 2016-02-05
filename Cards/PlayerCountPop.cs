@@ -12,10 +12,12 @@ namespace Cards
 {
     public partial class PlayerCountPop : Form
     {
-        private List<Player> playerQueue = new List<Player>();  
+        private List<Player> playerQueue = new List<Player>();
+        private int maxPlayerCount;
 
-        public PlayerCountPop()
+        public PlayerCountPop(int maxPlayers)
         {
+            this.maxPlayerCount = maxPlayers;
             InitializeComponent();
             this.AcceptButton = AddNewPlayerBtn;
             AddNewPlayerBtn.GotFocus += new EventHandler(AddPlayerFocus);
@@ -26,10 +28,17 @@ namespace Cards
 
         private void AddNewPlayerBtn_Click(object sender, EventArgs e)
         {
-            Player newPlayer = new Player(NewPlayerInput.Text);
-            playerQueue.Add(newPlayer);
-            Console.WriteLine("Added new Player: " + newPlayer.PlayerName);
-            NewPlayerInput.ResetText();
+            if (playerQueue.Count < maxPlayerCount)
+            {
+                Player newPlayer = new Player(NewPlayerInput.Text);
+                playerQueue.Add(newPlayer);
+                Console.WriteLine("Added new Player: " + newPlayer.PlayerName);
+                NewPlayerInput.ResetText();
+            }
+            else
+            {
+                AddNewPlayerBtn.Enabled = false;
+            }
         }
 
         private void DoneBtn_Click(object sender, EventArgs e)

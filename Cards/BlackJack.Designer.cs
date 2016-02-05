@@ -43,11 +43,11 @@
             this.p1StickBtn = new System.Windows.Forms.Button();
             this.dealerBox = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.DealerCard1 = new System.Windows.Forms.PictureBox();
+            this.DealerCard2 = new System.Windows.Forms.PictureBox();
+            this.DealerCard3 = new System.Windows.Forms.PictureBox();
+            this.DealerCard4 = new System.Windows.Forms.PictureBox();
+            this.DealerCard5 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -56,11 +56,11 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.dealerBox.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DealerCard1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DealerCard2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DealerCard3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DealerCard4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DealerCard5)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -224,56 +224,56 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox2);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox3);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox4);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox5);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox6);
+            this.flowLayoutPanel1.Controls.Add(this.DealerCard1);
+            this.flowLayoutPanel1.Controls.Add(this.DealerCard2);
+            this.flowLayoutPanel1.Controls.Add(this.DealerCard3);
+            this.flowLayoutPanel1.Controls.Add(this.DealerCard4);
+            this.flowLayoutPanel1.Controls.Add(this.DealerCard5);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(263, 125);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // pictureBox2
+            // DealerCard1
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(72, 100);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.DealerCard1.Location = new System.Drawing.Point(3, 3);
+            this.DealerCard1.Name = "DealerCard1";
+            this.DealerCard1.Size = new System.Drawing.Size(72, 100);
+            this.DealerCard1.TabIndex = 0;
+            this.DealerCard1.TabStop = false;
             // 
-            // pictureBox3
+            // DealerCard2
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(81, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(72, 100);
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.DealerCard2.Location = new System.Drawing.Point(81, 3);
+            this.DealerCard2.Name = "DealerCard2";
+            this.DealerCard2.Size = new System.Drawing.Size(72, 100);
+            this.DealerCard2.TabIndex = 1;
+            this.DealerCard2.TabStop = false;
             // 
-            // pictureBox4
+            // DealerCard3
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(159, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(72, 100);
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
+            this.DealerCard3.Location = new System.Drawing.Point(159, 3);
+            this.DealerCard3.Name = "DealerCard3";
+            this.DealerCard3.Size = new System.Drawing.Size(72, 100);
+            this.DealerCard3.TabIndex = 2;
+            this.DealerCard3.TabStop = false;
             // 
-            // pictureBox5
+            // DealerCard4
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(3, 109);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(72, 100);
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
+            this.DealerCard4.Location = new System.Drawing.Point(3, 109);
+            this.DealerCard4.Name = "DealerCard4";
+            this.DealerCard4.Size = new System.Drawing.Size(72, 100);
+            this.DealerCard4.TabIndex = 3;
+            this.DealerCard4.TabStop = false;
             // 
-            // pictureBox6
+            // DealerCard5
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(81, 109);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(72, 100);
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
+            this.DealerCard5.Location = new System.Drawing.Point(81, 109);
+            this.DealerCard5.Name = "DealerCard5";
+            this.DealerCard5.Size = new System.Drawing.Size(72, 100);
+            this.DealerCard5.TabIndex = 4;
+            this.DealerCard5.TabStop = false;
             // 
             // Blackjack
             // 
@@ -296,11 +296,11 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.dealerBox.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DealerCard1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DealerCard2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DealerCard3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DealerCard4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DealerCard5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,11 +320,11 @@
         private System.Windows.Forms.Label playerTotalLabel;
         private System.Windows.Forms.GroupBox dealerBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox DealerCard1;
+        private System.Windows.Forms.PictureBox DealerCard2;
+        private System.Windows.Forms.PictureBox DealerCard3;
+        private System.Windows.Forms.PictureBox DealerCard4;
+        private System.Windows.Forms.PictureBox DealerCard5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button p1DrawCardBtn;
         private System.Windows.Forms.Button p1StickBtn;

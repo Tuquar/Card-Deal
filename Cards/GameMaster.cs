@@ -12,6 +12,8 @@ namespace Cards
     {
         private int maxPlayers;
         private int playerCount;
+        private Player Dealer;
+        private int startDealer; // 
         private Deck gameDeck;
         private List<Player> playerList;
 
@@ -32,6 +34,9 @@ namespace Cards
 
         public void StartGame()
         {
+            Dealer = new Player("CPU");
+            playerList.Insert(0, Dealer);
+            StartPlayer++;
             DealRound(this.StartPlayer);
             
         }

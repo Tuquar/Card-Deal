@@ -38,11 +38,11 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.PlayerList = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.DoneBtn = new System.Windows.Forms.Button();
-            this.PlayerLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.RemoveBtn1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PlayerLayout = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.NewPlayerGroupBox.SuspendLayout();
@@ -82,7 +82,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(440, 74);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
@@ -153,7 +153,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(164, 26);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -178,17 +178,9 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(440, 75);
             this.tableLayoutPanel5.TabIndex = 2;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.PlayerLayout);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(364, 69);
-            this.flowLayoutPanel1.TabIndex = 3;
             // 
             // DoneBtn
             // 
@@ -199,6 +191,37 @@
             this.DoneBtn.Text = "Done";
             this.DoneBtn.UseVisualStyleBackColor = true;
             this.DoneBtn.Click += new System.EventHandler(this.DoneBtn_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.PlayerLayout);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(364, 69);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // RemoveBtn1
+            // 
+            this.RemoveBtn1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RemoveBtn1.Location = new System.Drawing.Point(10, 38);
+            this.RemoveBtn1.Name = "RemoveBtn1";
+            this.RemoveBtn1.Size = new System.Drawing.Size(75, 23);
+            this.RemoveBtn1.TabIndex = 1;
+            this.RemoveBtn1.Text = "Remove";
+            this.RemoveBtn1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(26, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
             // PlayerLayout
             // 
@@ -215,28 +238,6 @@
             this.PlayerLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PlayerLayout.Size = new System.Drawing.Size(95, 66);
             this.PlayerLayout.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(26, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
-            // RemoveBtn1
-            // 
-            this.RemoveBtn1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RemoveBtn1.Location = new System.Drawing.Point(10, 38);
-            this.RemoveBtn1.Name = "RemoveBtn1";
-            this.RemoveBtn1.Size = new System.Drawing.Size(75, 23);
-            this.RemoveBtn1.TabIndex = 1;
-            this.RemoveBtn1.Text = "Remove";
-            this.RemoveBtn1.UseVisualStyleBackColor = true;
             // 
             // PlayerCountPop
             // 
@@ -276,8 +277,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.ListBox PlayerList;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button DoneBtn;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel PlayerLayout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button RemoveBtn1;

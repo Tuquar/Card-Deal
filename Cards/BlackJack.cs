@@ -12,7 +12,8 @@ namespace Cards
 {
     public partial class Blackjack : Form
     {
-        PlayerCountPop playerPopup = new PlayerCountPop();
+        private static int maxPlayers = 1;
+        PlayerCountPop playerPopup = new PlayerCountPop(maxPlayers);
         private GameMaster BlackjackGM;
 
         public Blackjack()
