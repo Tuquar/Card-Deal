@@ -44,6 +44,7 @@ namespace Cards
             if (playerList.Count > 0)
             {
                 BlackjackGM = new GameMaster(playerList);
+                BlackjackGM.StartGame();
             }
             else
             {

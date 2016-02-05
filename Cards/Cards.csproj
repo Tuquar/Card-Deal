@@ -73,6 +73,7 @@
       <DependentUpon>GameBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="GameMaster.cs" />
+    <Compile Include="Hand.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerCountPop.cs">
       <SubType>Form</SubType>

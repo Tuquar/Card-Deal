@@ -12,7 +12,7 @@ namespace Cards
     {
         public List<Card> DeckofCards = new List<Card>();
 
-        public Deck()
+        public Deck(bool shuffled)
         {
             int order = 0;
             for (int suit = 1; suit <= 4; suit++)
@@ -24,7 +24,10 @@ namespace Cards
                     order++;
                 }
             }
-
+            if (shuffled)
+            {
+                this.ShuffleDeck();
+            }
         }
 
         public void ShuffleDeck()
@@ -40,6 +43,26 @@ namespace Cards
                 this.DeckofCards[k] = this.DeckofCards[deckLength];
                 this.DeckofCards[deckLength] = temp;
             }
+        }
+
+        public Card DrawCard()
+        {
+            Card toDraw;
+
+            toDraw = this.DeckofCards.FindLast(FindDrawn);
+
+            toDraw.drawn = true;
+
+            return toDraw;
+        }
+
+        private bool FindDrawn(Card card)
+        {
+            if (card.drawn)
+            {
+                return false;
+            }
+            return true;
         }
 
         public void OrderDeck()

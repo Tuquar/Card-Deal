@@ -4,12 +4,14 @@ using System.Drawing.Configuration;
 
 namespace Cards
 {
-    class Card
+    public class Card
     {
         public int suit;
         public int value;
         private int weight;
+        private int[] standardWeights = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
         public int order;
+        public bool drawn = false;
 
         public Card(int suit, int value)
         {
@@ -17,7 +19,7 @@ namespace Cards
             this.suit = suit;
             this.value = value;
 
-            this.weight = standardWeight(value);
+            this.weight = StandardWeight(value);
         }
 
         public Card(int suit, int value, int weight)
@@ -28,12 +30,9 @@ namespace Cards
             this.weight = weight;
         }
 
-        private int standardWeight(int value)
+        private int StandardWeight(int value)
         {
-            int[] weights = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
-            int weight = Array.IndexOf(weights, value);
-
-            return weight;
+            return standardWeights[value-1];
         }
 
         public string SuitToString()

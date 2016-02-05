@@ -16,7 +16,8 @@ namespace Cards
         public DeckExplorer()
         {
             InitializeComponent();
-            eDeck = new Deck();
+            bool shuffled = false;
+            eDeck = new Deck(shuffled);
             mainDeckDisplay.Items.Clear();
             mainDeckDisplay.BeginUpdate();
             foreach (var card in eDeck.DeckofCards)

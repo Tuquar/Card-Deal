@@ -28,7 +28,7 @@ namespace Cards
         {
             Player newPlayer = new Player(NewPlayerInput.Text);
             playerQueue.Add(newPlayer);
-            Console.WriteLine(newPlayer.PlayerName);
+            Console.WriteLine("Added new Player: " + newPlayer.PlayerName);
             NewPlayerInput.ResetText();
         }
 
