@@ -15,41 +15,44 @@ namespace Cards
         private Player Dealer;
         private int startDealer; // 
         private Deck gameDeck;
-        private List<Player> playerList;
+        private List<Player> playerList; // Should not contain CPU
+        private List<Player> dealOrder; // Can include CPU
+        private Form GameBoard;
 
         private const int twentyOne = 21;
         private int dealerLimit = 16;
-        private int StartCardNo = 2;
+        private int StartCardNo = 2; // number of cards you start with
         private int StartPlayer = 0; // 0 = player 1
         //TODO: Player can be dealer or there could be a seperate non-player dealer
 
-        public GameMaster(List<Player> listOfPlayers)
+        public GameMaster(List<Player> listOfPlayers, Form board)
         {
             playerCount = listOfPlayers.Count;
             this.playerList = listOfPlayers;
             bool shuffled = true;
             gameDeck = new Deck(shuffled);
-
+            dealOrder = new List<Player> (playerList);
+            GameBoard = board;
         }
 
         public void StartGame()
         {
             Dealer = new Player("CPU");
-            playerList.Insert(0, Dealer);
-            StartPlayer++;
-            DealRound(this.StartPlayer);
+            dealOrder.Add(Dealer);
+            Dealer.dealer = true;
+            DealRound();
             
         }
 
-        public void DealRound(int startPlayer)
+        public void DealRound()
         {
             int count = 0;
             Player currentPlayer;
-            while (count < playerList.Count)
+            while (count < dealOrder.Count)
             {
-                for (;startPlayer < playerList.Count; startPlayer++)
+                for (; StartPlayer < dealOrder.Count; StartPlayer++)
                 {
-                    currentPlayer = playerList[startPlayer];
+                    currentPlayer = dealOrder[StartPlayer];
                     if (currentPlayer.CardCount < StartCardNo)
                     {
                         currentPlayer.RecieveCard(gameDeck.DrawCard());
@@ -57,8 +60,15 @@ namespace Cards
                     }
                     count++;
                 }
-                startPlayer = 0;
+                StartPlayer = 0;
             }
         }
+        // TODO: recievecard event needs to be thrown to update gameboard
+        //public void DealCard(Player toDeal, Card card)
+        //{
+        //    toDeal.RecieveCard(card);
+        //    EventHandler CardRecieved = new System.EventHandler(GameBoard);
+
+        //}
     }
 }

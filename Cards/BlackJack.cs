@@ -23,7 +23,7 @@ namespace Cards
             this.Shown += new EventHandler(this.BlackjackWindowShown);
             
 
-
+            
 
         }
 
@@ -44,7 +44,7 @@ namespace Cards
             List<Player> playerList = playerPopup.GetPlayerQueue;
             if (playerList.Count > 0)
             {
-                BlackjackGM = new GameMaster(playerList);
+                BlackjackGM = new GameMaster(playerList, this);
                 BlackjackGM.StartGame();
             }
             else
@@ -54,6 +54,10 @@ namespace Cards
             }
             playerPopup.Dispose();
 
+        }
+
+        public void CardDrawn(Object sender, EventArgs e)
+        {
         }
 
         private void p1DrawCardBtn_Click(object sender, EventArgs e)

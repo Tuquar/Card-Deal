@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cards
 {
-    class Hand
+    public class Hand
     {
         List<Card> currentHand;
 

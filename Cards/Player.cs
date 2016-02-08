@@ -15,6 +15,7 @@ namespace Cards
         private int score;
         private int playerID;
         private Hand playerHand;
+        private bool isDealer = false;
 
         public Player(String name)
         {
@@ -27,11 +28,30 @@ namespace Cards
 
         }
 
+        public bool dealer {
+            get {return isDealer; }
+            set { isDealer = value; }
+        }
+
         public void RecieveCard(Card card)
         {
             this.playerHand.RecieveCard(card);
             Console.WriteLine(playerName + " has recieved " + card.ToFullString());
+            
+             
+            
         }
+
+        public void OnCardRecieved(EventArgs eventArgs)
+        {
+            EventHandler handler = CardReceived;
+            if (handler != null)
+            {
+                handler(this, eventArgs);
+            }
+        }
+
+        public event EventHandler CardReceived;
 
         public string PlayerName
         {
